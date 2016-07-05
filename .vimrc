@@ -1,24 +1,19 @@
-syntax on
-colorscheme slate
+set nocompatible 
+filetype off
+set nu
+set relativenumber
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Bundle 'VundleVim/Vundle.vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'pangloss/vim-javascript'
+call vundle#end() 
+filetype plugin indent on
 
-set nu! 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set smarttab
-set expandtab
-set autoindent
-set nocp
-filetype plugin on
 
-au FileType cpp let b:dlimitMate_autoclose = 1
-au FileType hpp let b:dlimitMate_autoclose = 1
-au FileType txt let b:dlimitMate_autoclose = 1
 
-nmap <silent> <A-Up> :wincmd k<CR>
-nmap <silent> <A-Down> :wincmd j<CR>
-nmap <silent> <A-Left> :wincmd h<CR>
-nmap <silent> <A-Right> :wincmd l <CR>
-nmap <silent> <F2> :NERDTreeToggle <CR>
-map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
