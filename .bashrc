@@ -108,3 +108,9 @@ alias nordby='ssh ptc@norby-paneda.dyndns.org -p1022'
 alias tasen='ssh ptc@tasen-paneda.dyndns.org -p1022'
 alias tromsoysund='ssh ptc@tromsoysund-paneda.dyndns.org -p1022'
 alias vadfoss='ssh ptc@vadfoss-paneda.dyndns.org -p1022'
+alias haumyrheia='ssh ptc@haumyrheia-paneda.dyndns.org -p1022'
+alias porsgrunn='ssh ptc@porsgrunn-paneda.dyndns.org -p1022'
+alias sjoormporten='ssh ptc@sjoormporten-paneda.dyndns.org -p1022'
+alias grimstadporten='ssh ptc@grimstadporten-paneda.dyndns.org -p1022'
+
+
