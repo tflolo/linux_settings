@@ -62,7 +62,16 @@ parse_git_branch () {
 
 PS1="\[${BOLD}${CYAN}\]\u\[$BASE0\]@\[$CYAN\]\h \[$BASE0\]in \[$BLUE\]\w\[$BASE0\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$YELLOW\]\$(parse_git_branch)\[$BASE0\]\n\$ \[$RESET\]"
 
-alias ptc='ssh ptc@ptc-dev'
+function execPTC(){
+	sh /home/thomas/work/scripts/ptc.sh $1
+}
+function execPBS1(){
+	sh /home/thomas/work/scripts/pbs1.sh $1
+}
+function execPBS2(){
+	sh /home/thomas/work/scripts/pbs2.sh $1
+}
+
 alias breimsfjell2='ssh ptc@breimsfjell2-paneda.dyndns.org -p1022'
 alias stavenes='ssh ptc@stavenes-paneda.dyndns.org -p1022'
 alias knappe='ssh ptc@knappe-paneda.dyndns.org -p1022'
@@ -82,8 +91,6 @@ alias dev='cd ~/dev/git/ptc/'
 alias curatoris='ssh thomas@192.168.72.94'
 alias kvaser='ssh gitmaster@kvaser'
 alias pi='ssh paneda@pi'
-alias pbs2='ssh paneda@pbs2'
-alias pbs1='ssh paneda@pbs1'
 alias pbs1_install='ssh paneda@192.168.73.4'
 alias pbs2_install='ssh paneda@192.168.73.5'
 alias pvp1='ssh paneda@PVP-1'
@@ -119,5 +126,15 @@ alias hundorp='ssh ptc@hundorp-paneda.dyndns.org -p1022'
 alias bukkestein='ssh ptc@bukkestein-paneda.dyndns.org -p1022'
 alias teistedal='ssh ptc@teistedal-paneda.dyndns.org -p1022'
 alias blodeskjar='ssh ptc@blodeskjar-paneda.dyndns.org -p1022'
-
+alias kragero='ssh ptc@kragero-paneda.dyndns.org -p1022'
+alias vabakken='ssh ptc@vabakken-paneda.dyndns.org -p1022'
+alias pretura='ssh ptc@prestura-paneda.dyndns.org -p1022'
+alias hem='ssh ptc@hem-paneda.dyndns.org -p1022'
+alias horten='ssh ptc@horten-paneda.dyndns.org -p1022'
+alias vagslid='ssh ptc@vagslid-paneda.dyndns.org -p1022'
+alias teigkampen='ssh ptc@teigkampen-paneda.dyndns.org -p1022'
+alias prestura='ssh ptc@prestura-paneda.dyndns.org -p1022'
+alias ptc="execPTC"
+alias pbs1="execPBS1"
+alias pbs2="execPBS2"
 
