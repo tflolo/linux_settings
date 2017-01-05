@@ -62,15 +62,15 @@ parse_git_branch () {
 
 PS1="\[${BOLD}${CYAN}\]\u\[$BASE0\]@\[$CYAN\]\h \[$BASE0\]in \[$BLUE\]\w\[$BASE0\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$YELLOW\]\$(parse_git_branch)\[$BASE0\]\n\$ \[$RESET\]"
 
-function execPTC(){
-	sh /home/thomas/work/scripts/ptc.sh $1
-}
-function execPBS1(){
-	sh /home/thomas/work/scripts/pbs1.sh $1
-}
-function execPBS2(){
-	sh /home/thomas/work/scripts/pbs2.sh $1
-}
+#function execPTC(){
+#	sh /home/thomas/work/scripts/ptc.sh $1
+#}
+#function execPBS1(){
+#	sh /home/thomas/work/scripts/pbs1.sh $1
+#}
+#function execPBS2(){
+#	sh /home/thomas/work/scripts/pbs2.sh $1
+#}
 
 alias breimsfjell2='ssh ptc@breimsfjell2-paneda.dyndns.org -p1022'
 alias stavenes='ssh ptc@stavenes-paneda.dyndns.org -p1022'
@@ -134,7 +134,7 @@ alias horten='ssh ptc@horten-paneda.dyndns.org -p1022'
 alias vagslid='ssh ptc@vagslid-paneda.dyndns.org -p1022'
 alias teigkampen='ssh ptc@teigkampen-paneda.dyndns.org -p1022'
 alias prestura='ssh ptc@prestura-paneda.dyndns.org -p1022'
-alias ptc="execPTC"
-alias pbs1="execPBS1"
-alias pbs2="execPBS2"
+#alias ptc="execPTC"
+#alias pbs1="execPBS1"
+#alias pbs2="execPBS2"
 
